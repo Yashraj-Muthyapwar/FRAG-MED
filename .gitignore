@@ -1,0 +1,62 @@
+# ============================================================================
+# FRAG-MED Project .gitignore
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+
+# Virtual Environment
+fl_env/
+venv/
+env/
+
+# Environment Variables
+.env
+.env.local
+
+# FRAG-MED Data
+data/preprocessed/
+data/parent_docs/
+data/child_nodes/
+data/chromadb/
+
+# Models (too large for Git)
+models/embeddings/neuml_pubmedbert-base-embeddings/
+models/llm/
+*.bin
+*.safetensors
+*.pt
+*.h5
+
+# Outputs
+outputs/logs/*.log
+outputs/phoenix/
+
+# Federated Hospital Data - UPDATED
+federated_hospitals/hospital_A/
+federated_hospitals/hospital_B/
+federated_hospitals/hospital_C/
+federated_hospitals/hospital_D/
+federated_hospitals/hospital_E/
+federated_hospitals/hospital_F/
+federated_hospitals/hospital_G/
+federated_hospitals/hospital_H/
+federated_hospitals/hospital_I/
+federated_hospitals/hospital_J/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temporary Files
+*.tmp
+*.swp
+*~

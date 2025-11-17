@@ -1,0 +1,54 @@
+# -- Core RAG Framework --
+llama-index
+chromadb
+
+# Core Dependencies
+python-dotenv
+rank_bm25
+
+# Remove specific Pydantic version pins to let LlamaIndex use its preferred version
+pydantic 
+pydantic-settings
+
+# -- LlamaIndex Connectors & Utilities --
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+llama-index-llms-ollama
+llama-index-llms-llama-cpp
+
+# -- LLM & Observability --
+
+# Update these packages as well, since they are related to LlamaIndex's instrumentation
+llama-index-callbacks-arize-phoenix
+arize-phoenix # Remove pin
+openinference-instrumentation # Remove pin
+openinference-instrumentation-llama-index # Remove pin
+opentelemetry-api # Remove pin
+opentelemetry-sdk # Remove pin
+opentelemetry-exporter-otlp # Remove pin
+
+# -- Local Embedding Model Dependencies --
+transformers
+torch
+sentence-transformers
+accelerate
+
+# -- Utility --
+tqdm       
+python-dotenv
+
+# CRITICAL: Pin uvicorn to compatible version (Keep these as they are non-llama index web framework dependencies)
+uvicorn==0.29.0
+starlette==0.37.2
+
+# Web framework dependencies
+fastapi==0.115.0
+httpx==0.27.0
+
+# Utilities
+requests==2.31.0
+aiohttp==3.9.1
+
+# Logging & Monitoring
+coloredlogs==15.0.1
+psutil==5.9.6
