@@ -393,21 +393,6 @@ python benchmarks/run_benchmarks.py
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Install pre-commit hooks
-pre-commit install
-
-# Run linters
-black src/
-flake8 src/
-mypy src/
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
@@ -419,23 +404,12 @@ If you use FRAG-MED in your research, please cite:
 ```bibtex
 @misc{fragmed2025,
   title={FRAG-MED: A Federated Retrieval-Augmented Framework for Secure and Collaborative Medical Diagnosis},
-  author={Chamakura, Hemanth Kumar and Muthyapwar, Yash Raj and Pabbathi, Rohith and Kuruva, Shashank},
+  author={YashRaj Muthyapwar},
   year={2025},
   publisher={GitHub},
-  url={https://github.com/YOUR_USERNAME/FRAG-MED}
+  url={https://github.com/Yashraj-Muthyapwar/FRAG-MED}
 }
 ```
-
-## 👥 Team
-
-**Team16 - University of North Texas**
-
-- Hemanth Kumar Chamakura - Data Engineering, Privacy Coordination
-- Yash Raj Muthyapwar - Data Engineering, Model Integration
-- Rohith Pabbathi - Model Development, Evaluation
-- Shashank Kuruva - Privacy Implementation, Analysis
-
-**Advisor:** Dr. Stephen F. Wheeler
 
 ## 🔗 Related Resources
 
@@ -445,15 +419,10 @@ If you use FRAG-MED in your research, please cite:
 - [Arize Phoenix](https://docs.arize.com/phoenix)
 - [LlamaIndex Documentation](https://docs.llamaindex.ai/)
 
-## 🐛 Known Issues
 
-See [GitHub Issues](https://github.com/YOUR_USERNAME/FRAG-MED/issues) for current bugs and feature requests.
-
-## 📞 Contact
 
 For questions or collaboration:
-- Open an [issue](https://github.com/YOUR_USERNAME/FRAG-MED/issues)
-- Email: yash.muthyapwar@unt.edu
+- Open an [issue](https://github.com/Yashraj-Muthyapwar/FRAG-MED/issues)
 
 ---
 
