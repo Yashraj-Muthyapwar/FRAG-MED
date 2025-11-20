@@ -16,9 +16,10 @@ llama-index-embeddings-huggingface
 llama-index-llms-ollama
 llama-index-llms-llama-cpp
 
-# -- LLM & Observability --
+# -- Application --
+gradio 
 
-# Update these packages as well, since they are related to LlamaIndex's instrumentation
+# -- LLM & Observability --
 llama-index-callbacks-arize-phoenix
 arize-phoenix # Remove pin
 openinference-instrumentation # Remove pin

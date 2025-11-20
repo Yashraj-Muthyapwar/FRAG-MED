@@ -49,8 +49,8 @@ class Config(BaseSettings):
     LLM_TIMEOUT: int = 240  # Timeout for LLM requests
 
     
-    LLM_TEMPERATURE: float = 0.0  # Low temperature for factual medical responses
-    LLM_MAX_TOKENS: int = 512  # Max tokens in response
+    LLM_TEMPERATURE: float = 0.3  # Low temperature for factual medical responses
+    LLM_MAX_TOKENS: int = 3072  # Max tokens in response
     
     # ChromaDB Configuration
     CHROMADB_COLLECTION: str = "frag_med_central"
@@ -61,7 +61,7 @@ class Config(BaseSettings):
     RESPONSE_MODE: str = "compact"
     CHUNK_OVERLAP: int = 50  # Overlap for text chunking
 
-    PARENT_DOC_MAX_TOKENS: int = 2000  # Truncate to 1200 tokens
+    PARENT_DOC_MAX_TOKENS: int = 2000  # Truncate to 2000 tokens
     EXTRACT_SECTIONS_ONLY: bool = True  # Extract only === SECTIONS === (faster + more accurate)
     
     # Parent Document Configuration
