@@ -248,7 +248,13 @@ FRAG-MED/
 
 ## 🛠️ Configuration
 
-Edit `config.py` or `federated_config.py`:
+Edit `config.py` or `federated_config.py` to change:
+- Embedding model  
+- LLM model  
+- Top‑K docs  
+- Temperature  
+- Max tokens
+- etc.
 ```python
 # Model paths
 EMBEDDING_MODEL_PATH = "models/embeddings/neuml_pubmedbert-base-embeddings"
