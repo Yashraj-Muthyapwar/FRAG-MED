@@ -21,14 +21,14 @@
 - [Prerequisites](#-prerequisites)
 - [Quick Start](#-quick-start)
 - [Generate Patient Data](#-generate-patient-data)
-- [Preprocessing](#-preprocessing)
+- [Preprocessing](#%EF%B8%8F-preprocessing)
 - [Running Queries](#-running-queries)
 - [Privacy Features](#-privacy-features)
 - [Project Structure](#-project-structure)
-- [Configuration](#-configuration)
+- [Configuration](#%EF%B8%8F-configuration)
 - [Resources](#-resources)
 - [Screenshots](#-screenshots)
-- [Disclaimer](#-disclaimer)
+- [Disclaimer](#%EF%B8%8F-disclaimer)
 - [License](#-license)
 
 ## 🎯 Overview
