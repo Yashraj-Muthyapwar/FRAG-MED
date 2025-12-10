@@ -86,7 +86,7 @@ ollama pull jsk/bio-mistral
 
 ### 3. Download Embeddings
 ```bash
-python download_local_models.py
+python download.py
 ```
 
 Downloads PubMedBERT (~420MB) to `models/embeddings/`.
@@ -186,26 +186,64 @@ All patient data is automatically de-identified:
 - ✅ **No raw data sharing**: Only aggregated responses leave hospitals
 - ✅ **HIPAA-compliant design**: De-identification before indexing
 
-
 ## 📁 Project Structure
-```
+
+```text
 FRAG-MED/
-├── app.py              # Web UI
-├── config.py                      # Configuration
+├── app.py                          # Streamlit / web UI
+├── config.py                       # Global configuration
+├── custom_query.py                 # Custom RAG query runner
+├── download.py                     # Download embedding model locally
+├── hospital_splitting.ipynb        # Optional dynamic hospital splitter
+├── requirements.txt                # To install all the libraries and dependencies
+├── readme.md
+├── verify_setup.py                 # Sanity checks for paths/models
+
+├── models/
+│   └── embeddings/
+│       └── neuml_pubmedbert-base-embeddings/   # Local PubMedBERT embeddings
+
+├── data/                           # Centralized (non-federated) artifacts
+│   ├── preprocessed/               # Cleaned patient JSON files
+│   ├── parent_docs/                # Long-form parent documents (batched)
+│   ├── child_nodes/                # Chunked child nodes for retrieval
+│   └── chromadb/                   # Centralized Chroma vector store
+
 ├── src/
-│   ├── preprocessing/             # Data pipeline
-│   ├── rag/                       # Query engine
-│   └── utils/                     # De-identification
-├── federated_hospitals/           # Hospital data silos
+│   ├── main_preprocessing.py       # End-to-end centralized preprocessing
+│   ├── monitor_system.py           # System resource monitoring
+│   ├── preprocessing/              # Preprocessing + indexing pipeline
+│   │   ├── batch_processor.py
+│   │   ├── parent_storage.py
+│   │   └── child_indexer.py
+│   ├── rag/                        # RAG query engine
+│   │   └── query_engine.py
+│   ├── utils/                      # Helpers & de-identification
+│   │   ├── data_loader.py
+│   │   ├── deidentification.py
+│   │   └── node_generator.py
+│   └── observability/              # LLM observability (Phoenix)
+│       └── phoenix_setup.py
+
+├── federated_hospitals/            # Federated hospital silos (A–J)
 │   ├── hospital_A/
-│   │   ├── preprocessed/          # Patient files
-│   │   ├── parent_docs/           # Full contexts
-│   │   └── chromadb/              # Vector DB
-│   └── hospital_B...J/
-├── hospital_preprocessing.py      # Per-hospital setup
-├── federated_orchestrator_dp.py   # Federated coordinator
-├── run_federated_dp.py            # CLI queries
-└── test_queries.py                # Sample queries
+│   │   ├── preprocessed/           # Hospital-level preprocessed data
+│   │   ├── parent_docs/            # Hospital-level parent docs
+│   │   ├── child_nodes/            # Hospital-level chunks
+│   │   ├── chromadb/               # Hospital-level vector DB
+│   │   └── logs/                   # Local RAG logs
+│   ├── hospital_B/
+│   └── ... hospital_C ... hospital_J/
+
+├── hospital_preprocessing.py       # Build per-hospital silos
+├── hospital_rag_dp.py              # Hospital-side RAG with DP
+├── federated_config.py             # Federated-specific config
+├── federated_aggregation.py        # Aggregation + majority voting
+├── federated_orchestrator_dp.py    # Federated coordinator (DP-aware)
+└── outputs/
+    ├── logs/
+    │   └── federated/              # Federated run logs
+    └── phoenix/                    # Arize Phoenix traces & artifacts
 ```
 
 ## 🛠️ Configuration
