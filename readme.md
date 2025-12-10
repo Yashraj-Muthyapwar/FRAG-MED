@@ -16,21 +16,20 @@
 </div>
 
 ## 📑 Table of Contents
-- [Overview](#overview)
+- [Overview](#-overview)
 - [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [Generate Patient Data](#generate-patient-data)
+- [Prerequisites](#-prerequisites)
+- [Quick Start](#-quick-start)
+- [Generate Patient Data](#-generate-patient-data)
 - [Preprocessing](#preprocessing)
-- [Running Queries](#running-queries)
-- [Privacy Features](#privacy-features)
-- [Project Structure](#project-structure)
+- [Running Queries](#-running-queries)
+- [Privacy Features](#-privacy-features)
+- [Project Structure](#-project-structure)
 - [Configuration](#configuration)
-- [Resources](#resources)
-- [Screenshots](#screenshots)
+- [Resources](#-resources)
+- [Screenshots](#-screenshots)
 - [Disclaimer](#disclaimer)
-- [License](#license)
-
+- [License](#-license)
 
 ## 🎯 Overview
 
