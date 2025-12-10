@@ -217,7 +217,7 @@ LLM_MAX_TOKENS = 3072         # Max response length
 **Always consult qualified medical professionals for clinical decisions.**
 
 ### 📝 License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.txt) file for more details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
 **⭐ Star this repo if you find it useful! ⭐**
 
