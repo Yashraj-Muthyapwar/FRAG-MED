@@ -1,10 +1,29 @@
-from transformers import AutoTokenizer, AutoModel
 
-# 1. Load it first 
-model = AutoModel.from_pretrained("neuml/pubmedbert-base-embeddings") 
-tokenizer = AutoTokenizer.from_pretrained("neuml/pubmedbert-base-embeddings") 
+from pathlib import Path
 
-# 2. Save it to your specific directory 
-output_dir = "./models" 
-model.save_pretrained(output_dir) 
-tokenizer.save_pretrained(output_dir)
+from huggingface_hub import snapshot_download
+from config import config
+
+
+def main():
+    model_id = config.EMBEDDING_MODEL_NAME
+    local_dir: Path = config.EMBEDDING_MODEL_PATH
+
+    # Ensure parent directory exists
+    local_dir.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"📥 Downloading '{model_id}' to '{local_dir}' ...")
+
+    snapshot_download(
+        repo_id=model_id,
+        local_dir=str(local_dir),
+        local_dir_use_symlinks=False,  # make real files instead of symlinks
+    )
+
+    print("\n✅ Download complete.")
+    print(f"📂 Files saved under: {local_dir}")
+    print("✅ You can now run your preprocessing + indexing with the LOCAL embedding model.")
+
+
+if __name__ == "__main__":
+    main()
