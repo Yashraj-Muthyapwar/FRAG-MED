@@ -9,7 +9,7 @@
 [![LlamaIndex](https://img.shields.io/badge/LlamaIndex-RAG%20framework-blue)](https://docs.llamaindex.ai/)
 [![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20DB-green)](https://www.trychroma.com/)
 [![Transformers](https://img.shields.io/badge/Transformers-PubMedBERT-orange)](https://huggingface.co/neuml/pubmedbert-base-embeddings)
-[![Ollama](https://img.shields.io/badge/Ollama-BioMistral--7B-red)]([https://ollama.com/](https://ollama.com/jsk/bio-mistral))
+[![Ollama](https://img.shields.io/badge/Ollama-BioMistral--7B-red)](https://ollama.com/jsk/bio-mistral)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Web%20UI-pink)](https://streamlit.io/)
 [![Arize Phoenix](https://img.shields.io/badge/Arize%20Phoenix-Observability-lightgrey)](https://docs.arize.com/phoenix/)
 
