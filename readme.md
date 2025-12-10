@@ -128,16 +128,27 @@ python hospital_preprocessing.py hospital_A
 python hospital_preprocessing.py hospital_B
 # ... repeat for hospitals C-J
 ```
+### 🔀 Dynamic Hospital Splitting (optional)
 
-**Output:**
-```
-🎉 PREPROCESSING COMPLETE!
-├─ Patients: 11,202
-├─ Encounters: 604,688
-├─ Parent docs: data/parent_docs/
-└─ Vector index: data/chromadb/
-```
+You can use **`hospital_splitting.ipynb`** to automatically create realistic federated silos:
 
+- 📂 **Analyze raw patient JSON files** in `data/raw_patients/`
+- 🏥 **Build specialization profiles** for each hospital based on top medical conditions
+- 👥 **Assign patients** to the best-matching hospital
+- 📤 **Export results** to `data/federated_hospitals/`
+
+### ⚙️ Preprocessing Outputs
+
+| **Category**            | **Centralized System**                          | **Federated System**                                      |
+|--------------------------|------------------------------------------------|-----------------------------------------------------------|
+| 🎉 Status               | PREPROCESSING COMPLETE!                         | FEDERATED PREPROCESSING COMPLETE!                         |
+| Patients                 | 11,202                                         | 11,202 (distributed across hospitals)                     |
+| Encounters               | 604,688                                        | 604,688 (distributed across hospitals)                    |
+| Hospitals                | Single centralized repository                  | 10 hospitals (hospital_A … hospital_J)                    |
+| Parent docs              | `data/parent_docs/`                            | Per-hospital dirs: `parent_docs/`                         |
+| Vector index             | `data/chromadb/`                               | Per-hospital dirs: `chromadb/`                            |
+| Preprocessed data        | Centralized in `data/preprocessed/`            | Per-hospital dirs: `preprocessed/`                        |
+| Hospital silos root      | —                                              | `federated_hospitals/`                                    |
 
 
 ## 💻 Running Queries
