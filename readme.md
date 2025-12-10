@@ -15,7 +15,22 @@
 
 </div>
 
----
+## 📑 Table of Contents
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Prerequisites](#prerequisites)
+- [Quick Start](#quick-start)
+- [Generate Patient Data](#generate-patient-data)
+- [Preprocessing](#preprocessing)
+- [Running Queries](#running-queries)
+- [Privacy Features](#privacy-features)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [Resources](#resources)
+- [Screenshots](#screenshots)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+
 
 ## 🎯 Overview
 
@@ -271,6 +286,22 @@ LLM_MAX_TOKENS = 3072         # Max response length
 - **[BioMistral-7B](https://huggingface.co/BioMistral/BioMistral-7B)** - Medical LLM
 - **[PubMedBERT](https://huggingface.co/neuml/pubmedbert-base-embeddings)** - Clinical embeddings
 - **[LlamaIndex](https://docs.llamaindex.ai/)** - RAG framework
+
+### 📸 Screenshots
+<details>
+<summary>Click to expand</summary>
+
+### Streamlit Web Interface (Centralized)
+![Query Interface](Screenshots/Demo1.png)
+
+### Streamlit Web Interface (Federated)
+![Federated Results](Screenshots/Demo2.png)
+
+### Observability Dashboard
+![Phoenix Traces](Screenshots/Demo3.png)
+
+</details>
+
 
 ### ⚠️ Disclaimer
 
