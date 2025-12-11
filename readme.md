@@ -125,7 +125,7 @@ cd synthea
 ./run_synthea -p 1000 Texas
 ```
 
-Place generated files in `data/preprocessed/` or see our [data generation notebook](data_generation.ipynb).
+Place generated files in `data/preprocessed/` or see our [data generation notebook](notebooks/data_generation.ipynb).
 
 
 ## ⚙️ Preprocessing
